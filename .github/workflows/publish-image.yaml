@@ -32,8 +32,8 @@ jobs:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v3
       with:
-        registry: ${{ REGISTRY }}
-        username: ${{ USERNAME }}
+        registry: ${{ env.REGISTRY }}
+        username: ${{ env.USERNAME }}
         password: ${{ secrets.HARBOR_PASSWORD }}
 
     - name: Build Docker image with Nix
