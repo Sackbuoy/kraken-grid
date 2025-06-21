@@ -1,0 +1,22 @@
+positions:
+  - name: BTC/USDC
+    buy:
+      amount: 10 # usdc
+      percentage: 1
+    sell:
+      amount: 0 # 0 means just match the buy
+      percentage: 2
+  - name: ETH/USDC
+    buy:
+      amount: 10 # usdc
+      percentage: 1
+    sell:
+      amount: 0
+      percentage: 2
+  - name: SOL/USDC
+    buy:
+      amount: 10 # usdc
+      percentage: 1
+    sell:
+      amount: 0
+      percentage: 2
