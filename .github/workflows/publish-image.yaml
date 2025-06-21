@@ -1,8 +1,9 @@
 name: Publish release
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: harbor.goopy.us
   IMAGE: sackbuoy/kraken-grid
+  USERNAME: robot$gh-action
 
 on:
   release:
@@ -31,9 +32,9 @@ jobs:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v3
       with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.TOKEN }}
+        registry: ${{ REGISTRY }}
+        username: ${{ USERNAME }}
+        password: ${{ secrets.HARBOR_PASSWORD }}
 
     - name: Build Docker image with Nix
       run: |
